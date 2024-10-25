@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Ha Manh Tien">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <h1>Infor</h1>
+    <table width="200" border="1">
+        <tr>
+            <th colspan="2">THONG TIN DANG NHAP</th>
+        </tr>
+        <tr>
+            <td>User name</td>
+            <td id="us">AAAA</td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td id="pw">BBBB</td>
+        </tr>
+        <tr>
+            <td>Gioi tinh</td>
+            <td id="gen">DDDD</td>
+        </tr>
+        <tr>
+            <td>Cafe ban chon</td>
+            <td id="cf">CCCC</td>
+        </tr>
+    </table>
+</body>
+<script>
+    var gt1, gt2, gt3, gt4;
+    gt1 = localStorage.getItem("us");
+    gt2 = localStorage.getItem("pd");
+    gt3 = localStorage.getItem("cf");
+    gt4 = localStorage.getItem("gt");
+
+    document.getElementById("us").innerHTML = gt1;
+    document.getElementById("pw").innerHTML = gt2;
+    document.getElementById("cf").innerHTML = gt3;
+    document.getElementById("gen").innerHTML = gt4;
+</script>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Ha Manh Tien">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <form>
+            <input type="text" id="txtus" placeholder="User name">
+            <br>
+            <input type="password" id="txtmk" placeholder="Password">
+            <br>
+            <input type="radio" name="gt" value="Nam">Nam
+            <input type="radio" name="gt" value="Nu">Nu
+            <br>
+            <input type="checkbox" value="Trung Nguyen">Trung Nguyen
+            <br>
+            <input type="checkbox" value="Mekong">Mekong
+            <br>
+            <input type="checkbox" value="New Blue">New Blue
+            <br>
+            <input type="checkbox" value="Tra Sua">Tra Sua
+            <br>
+            <input type="button" value="Nhap" onclick="Nhap()">
+            <br>
+        </form>
+    </div>
+</body>
+<script>
+    function Nhap() {
+        var tendn, mk;
+        tendn = document.getElementById("txtus").value;
+        mk = document.getElementById("txtmk").value;
+        var cafe = new Array();
+
+        var taphop = document.querySelectorAll("input[type='checkbox']");
+        taphop.forEach(function(chk) {
+            if (chk.checked)
+                cafe.push(chk.value);
+        });
+        var gtinh;
+
+        var taphopgt = document.querySelectorAll("input[type='radio']");
+        taphopgt.forEach(function(ra) {
+            if (ra.checked)
+                gtinh = ra.value;
+        })
+
+        var w = window.open("info.html");
+
+        localStorage.setItem("us", tendn)
+        localStorage.setItem("pd", mk)
+        localStorage.setItem("cf", cafe)
+        localStorage.setItem("gt", gt)
+    }
+</script>
+
+</html>

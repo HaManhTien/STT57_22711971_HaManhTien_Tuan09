@@ -1,0 +1,9 @@
+* {
+    margin: 0px auto;
+    padding: 0px;
+}
+
+.wrapper {
+    width: 789px;
+    height: 500px;
+}
